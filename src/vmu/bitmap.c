@@ -33,7 +33,7 @@ bitmap_t *bitmap_create(int width, int height) {
   }
   bitmap->width = width;
   bitmap->height = height;
-  bitmap->data = (uint8_t *)(bitmap + sizeof(bitmap_t));
+  bitmap->data = (uint8_t *)((void *)bitmap + sizeof(bitmap_t));
   return bitmap;
 }
 
@@ -44,7 +44,7 @@ void bitmap_reset(bitmap_t *bmap) {
   memset(bmap->data, 0, (bmap->width * bmap->height) / BITS_PER_BYTE);
 }
 
-void destroy_bitmap(bitmap_t *bitmap) {
+void bitmap_destroy(bitmap_t *bitmap) {
   if (bitmap != NULL) {
     free(bitmap);
   }

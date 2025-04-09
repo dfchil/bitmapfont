@@ -13,7 +13,7 @@ typedef struct {
 
 bitmap_t *bitmap_create(int width, int height);
 
-void destroy_bitmap(bitmap_t *bitmap);
+void bitmap_destroy(bitmap_t *bitmap);
 void bitmap_set(bitmap_t *bmap, int x, int y);
 void bitmap_clear(bitmap_t *bmap, int x, int y);
 void bitmap_write_line(bitmap_t *bmap, int x, int y, lines_def_t *line,
