@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "*.embeddedhtml": "html",
+    "stdlib.h": "c"
+  },
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}/**",
+    "${workspaceFolder}/include/**"
+  ],
+  "C_Cpp.default.compilerPath": "/opt/bin/clang"
+}
